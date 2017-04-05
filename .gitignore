@@ -4,6 +4,7 @@ node-debug.log
 
 npm-debug.log
 node-debug.log
+yarn-error.log
 
 # builds
 bundle.js

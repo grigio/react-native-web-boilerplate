@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
+    marginTop: ['ios', 'android'].includes(Platform.OS) ? 20 : 0,
   },
   image: {
     width: 36,

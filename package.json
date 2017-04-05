@@ -1,5 +1,5 @@
 {
-  "name": "react-native-web-boilerplate",
+  "name": "ReactNativeWebBoilerplate",
   "version": "0.0.1",
   "description": "react-native-web boilerplate",
   "engines": {
@@ -7,15 +7,21 @@
   },
   "author": "agrcrobles@gmail.com",
   "license": "MIT",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
     "web": "webpack-dev-server --config web/webpack.config.js",
     "flow": "flow"
   },
   "dependencies": {
+    "expo": "^15.1.0",
+    "react-native": "0.42.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-native": "0.40.0",
     "react-native-vector-icons": "^4.0.0",
     "react-native-web": "0.0.80",
     "react-navigation": "1.0.0-beta.7",
@@ -24,6 +30,9 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "react-native-scripts": "0.0.26",
+    "jest-expo": "^0.3.0",
+    "react-test-renderer": "~15.4.1",
     "babel-core": "^6.21.0",
     "babel-eslint": "6.1.2",
     "babel-loader": "^6.2.10",
@@ -35,5 +44,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.3.0",
     "webpack-dev-server": "^2.4.2"
+  },
+  "jest": {
+    "preset": "jest-expo"
   }
 }

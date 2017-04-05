@@ -86,7 +86,7 @@ const DrawerExample = DrawerNavigator({
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
+    marginTop: ['ios', 'android'].includes(Platform.OS) ? 20 : 0,
   },
 });
 
